@@ -1,38 +1,112 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 1%;
+  box-shadow: 5px 10px 5px 10px #000000;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card .title{
+  animation: iconanimation 3s infinite;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title{
+  font-weight: 800;
+  color: #000000b9;
+  font-size: 30px;
+}
+.search-form{
+  margin-top: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-form input{
+   width: 85%;
+   height: 40px;
+   padding: 5px;
+   border: none;
+   background: #bbb8ce;
+   /* color: #000; */
+   border-radius: 10px;
+   margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-form input::placeholder{
+  color: black;
+}
+
+.search-form button{
+  width: 7%;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #251463 30%, #1f1c18 90%);
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-form button:hover{
+  background: linear-gradient(45deg, #2d3464 30%,#33230d 90%);
+}
+
+.main-container{
+  width: 100%;
+  height: auto;
+  color: #000000b9;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.main-container h4{
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.main-container .weather-icon img{
+  width: 100px;
+  height: 100px;
+  animation: iconanimation 3s infinite;
+
+}
+
+@keyframes iconanimation{
+  from{
+        transform: scale(0.5,0.5);
   }
-  to {
-    transform: rotate(360deg);
+  to{
+    transform: scale(1,1);
+
   }
+}
+
+@media screen and (min-width:600px) {
+  /* .search-form input{
+    width: 70%;
+  } */
+  .search-form button{
+    width: 15%
+  }
+}
+@media screen and (max-width:600px) {
+  .search-form input{
+    width: 70%;
+  }
+  .search-form button{
+    width: 25%
+  }
+}
+
+.temperature h1{
+  font-size:30px;
+  font-weight: 900;
 }
